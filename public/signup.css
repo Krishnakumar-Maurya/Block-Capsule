@@ -1,0 +1,371 @@
+.deepaksignup-child {
+    position: absolute;
+    height: 85.65%;
+    width: 91.74%;
+    top: 4.90%;
+    right: 3.61%;
+    bottom: 6.47%;
+    left: 4.65%;
+    border-radius: var(--br-11xl);
+    background-color:#00bdb7;
+  }
+  .by-continuing-you {
+    margin: 0;
+    position: absolute;
+    height: 1.65%;
+    width: 51.53%;
+    top: 95.94%;
+    left: 47.91%;
+    font-size: inherit;
+    line-height: 14.5px;
+    font-weight: 300;
+    font-family: inherit;
+    color: red;
+    display: inline-block;
+  }
+  .deepaksignup-child1,
+  .deepaksignup-child2,
+  .deepaksignup-inner,
+  .deepaksignup-item,
+  .frame-input {
+    border: 1px solid var(--color-gainsboro-400);
+    font-family: var(--font-poppins);
+    font-size: var(--paragraph-bold-size);
+    background-color: var(--background-0);
+    position: absolute;
+    height: 8.02%;
+    width: 29.04%;
+    top: 20.7%;
+    right: 17.78%;
+    bottom: 61.29%;
+    left: 53.18%;
+    border-radius: var(--br-3xs);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-6xl) var(--padding-5xl);
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .deepaksignup-child1,
+  .deepaksignup-child2,
+  .deepaksignup-inner,
+  .frame-input {
+    top: 30.82%;
+    right: 17.85%;
+    bottom: 51.17%;
+    left: 53.11%;
+    padding: var(--padding-8xl) var(--padding-5xl);
+  }
+  .deepaksignup-child1,
+  .deepaksignup-child2,
+  .frame-input {
+    width: 28.9%;
+    top: 41.29%;
+    right: 17.92%;
+    bottom: 40.7%;
+    left: 53.18%;
+  }
+  .deepaksignup-child1,
+  .deepaksignup-child2 {
+    width: 29.04%;
+    top: 51.4%;
+    right: 17.78%;
+    bottom: 20.58%;
+    flex-direction: row;
+    padding: var(--padding-6xl) var(--padding-5xl);
+    justify-content: space-between;
+  }
+  .deepaksignup-child2 {
+    top: 61.52%;
+    bottom: 30.46%;
+  }
+  .have-an-account {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    line-height: 14.5px;
+    font-weight: 300;
+    font-family: inherit;
+  }
+  .have-an-account-parent,
+  .log-in {
+    font-size: var(--paragraph-bold-size);
+  }
+  .log-in {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    line-height: 14.5px;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-blue);
+    text-align: left;
+    display: inline-block;
+    width: 58px;
+    height: 17px;
+    flex-shrink: 0;
+  }
+  .have-an-account-parent {
+    position: absolute;
+    top: 53px;
+    right: 116px;
+    width: 196px;
+    height: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-9xs);
+  }
+  .get-started-with {
+    margin: 0;
+    position: absolute;
+    height: 4.94%;
+    top: 11.65%;
+    left: calc(50% + 56.5px);
+    font-size: var(--font-size-5xl);
+    line-height: 44px;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+    width: 389px;
+  }
+  .vector-icon {
+    position: relative;
+    width: 130px;
+    height: 1px;
+  }
+  .or-continue-with {
+    position: relative;
+    line-height: 14.5px;
+  }
+  .frame,
+  .frame-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .frame {
+    width: 248px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .frame-parent {
+    position: absolute;
+    height: 1.76%;
+    top: 26.35%;
+    bottom: 71.88%;
+    left: calc(50% + 48.5px);
+    width: 411px;
+    font-size: var(--font-size-smi);
+  }
+  .google-1-icon {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .google {
+    position: relative;
+    font-size: var(--disclaimer-bold-size);
+    line-height: 44px;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    color: var(--color-black);
+    text-align: left;
+  }
+  .google-1-parent {
+    cursor: pointer;
+    border: 1px solid var(--color-limegreen-100);
+    padding: var(--padding-0) var(--padding-7xl);
+    background-color: var(--background-0);
+    position: absolute;
+    height: 4.71%;
+    top: 20.12%;
+    bottom: 75.18%;
+    left: calc(50% + 113.5px);
+    border-radius: var(--br-8xs);
+    box-sizing: border-box;
+    width: 131px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-5xs);
+  }
+  .facebook-1-icon {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .facebook-1-parent {
+    cursor: pointer;
+    border: 1px solid var(--color-gainsboro-300);
+    padding: var(--padding-0) var(--padding-base);
+    background-color: var(--background-0);
+    position: absolute;
+    height: 4.71%;
+    top: 20.24%;
+    bottom: 75.06%;
+    left: calc(50% + 258.5px);
+    border-radius: var(--br-8xs);
+    box-sizing: border-box;
+    width: 131px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-5xs);
+  }
+  .create-account {
+    position: relative;
+    font-size: 14.85px;
+    line-height: 11.96px;
+    font-family: var(--font-poppins);
+    color: var(--color-black);
+    text-align: center;
+    display: inline-block;
+    width: 393px;
+    flex-shrink: 0;
+  }
+  .button {
+    cursor: pointer;
+    border: 0;
+    padding: 20px 142px;
+    background-color: #05ff00;
+    position: absolute;
+    height: 5.88%;
+    width: 29.1%;
+    top: 81.65%;
+    right: 17.85%;
+    bottom: 12.47%;
+    left: 53.05%;
+    border-radius: var(--br-3xs);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+  .signup-bg-1-icon {
+    position: absolute;
+    height: 48.12%;
+    width: 32.08%;
+    top: 30.59%;
+    right: 59.24%;
+    bottom: 21.29%;
+    left: 8.68%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .flash-circle-icon {
+    position: relative;
+    width: 56px;
+    height: 53px;
+  }
+  .the-first {
+    position: relative;
+    line-height: 18.68px;
+  }
+  .flash-circle-parent,
+  .frame-div {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .flash-circle-parent {
+    align-self: stretch;
+    height: 46px;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-3xs);
+  }
+  .frame-div {
+    position: absolute;
+    height: 7.54%;
+    width: 19.65%;
+    top: 11.4%;
+    right: 71.67%;
+    bottom: 81.06%;
+    left: 8.68%;
+    border-radius: 47.56px;
+    background: linear-gradient(#61cb78, #61cb78), #76f591;
+    flex-direction: column;
+    padding: var(--padding-6xs) var(--padding-11xl) var(--padding-6xs)
+      var(--padding-3xs);
+    box-sizing: border-box;
+    align-items: flex-start;
+    font-size: var(--header-3-size);
+    color: var(--color-black);
+  }
+  .deepaksignup {
+    position: relative;
+    background-color: var(--color-whitesmoke-100);
+    width: 100%;
+    height: 796px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-base);
+    color: var(--background-0);
+    font-family: var(--font-poppins);
+  }
+  @media screen and (max-width: 960px) {
+    .deepaksignup-child1,
+    .deepaksignup-child2 {
+      flex-direction: column;
+      gap: var(--gap-159xl);
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+  .radio-buttons {
+    position: absolute;
+      margin: auto;
+    top: 70.7%;
+    right: 17.78%;
+    bottom: 61.29%;
+    left: 53.18%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-6xl) var(--padding-5xl);
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .rdo{
+      position: absolute;
+      margin: auto;
+    top: 70.7%;
+    right: 17.78%;
+    bottom: 61.29%;
+    left: 53.18%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-6xl) var(--padding-5xl);
+    align-items: flex-start;
+    justify-content: flex-start;
+  
+  }
+  .rdo2{
+    position: absolute;
+      margin: auto;
+    top: 70.7%;
+    right: 47.78%;
+    bottom: 61.29%;
+    left: 13.18%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-6xl) var(--padding-5xl);
+    align-items: flex-start;
+    justify-content: flex-start;
+  
+  }

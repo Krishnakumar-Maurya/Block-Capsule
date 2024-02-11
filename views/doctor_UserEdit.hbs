@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    {{!-- --- using web3 cdn ---  --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    {{!-- ----------------------  --}}
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/patient_form.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inika:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="final-userform">
+      <div class="rectangle-parent7">
+        <div class="frame-child65"></div>
+        <div class="form-block-wrapper">
+          <img class="form-block-icon2" alt="" src="/photos/form-block2.svg" />
+        </div>
+        
+        
+
+        
+
+
+        <div class="frame-child75"></div>
+        <div class="frame-docs4">
+          <div class="uploadeddata5" id="listContainer"></div>
+          <div class="pdfreportlist10">
+            
+          </div>
+          {{!-- <div class="pdfreportlist10">
+            <div class="pdfreportlist-child18"></div>
+            <img
+              class="pdfreportlist-child19"
+              alt=""
+              src="/photos/frame-1518@2x.png"
+            />
+
+            <h5 class="ct-scan19">CT Scan</h5>
+            <button class="vector-wrapper19">
+              <img class="vector-icon74" alt="" src="/photos/vector72.svg" />
+            </button>
+            <button class="vector-parent23">
+              <img class="vector-icon75" alt="" src="/photos/vector73.svg" />
+
+              <img class="vector-icon76" alt="" src="/photos/vector74.svg" />
+            </button>
+            <i class="i10">20/07/2021</i>
+          </div>
+          <div class="pdfreportlist10">
+            <div class="pdfreportlist-child18"></div>
+            <img
+              class="pdfreportlist-child19"
+              alt=""
+              src="/photos/frame-1518@2x.png"
+            />
+
+            <h5 class="ct-scan19">CT Scan</h5>
+            <button class="vector-wrapper19">
+              <img class="vector-icon74" alt="" src="/photos/vector72.svg" />
+            </button>
+            <button class="vector-parent23">
+              <img class="vector-icon75" alt="" src="/photos/vector73.svg" />
+
+              <img class="vector-icon76" alt="" src="/photos/vector74.svg" />
+            </button>
+            <i class="i10">20/07/2021</i>
+          </div>
+          <div class="pdfreportlist10">
+            <div class="pdfreportlist-child18"></div>
+            <img
+              class="pdfreportlist-child19"
+              alt=""
+              src="/photos/frame-1518@2x.png"
+            />
+
+            <h5 class="ct-scan21">CT Scan</h5>
+            <button class="vector-wrapper19">
+              <img class="vector-icon74" alt="" src="/photos/vector72.svg" />
+            </button>
+            <button class="vector-parent23">
+              <img class="vector-icon75" alt="" src="/photos/vector73.svg" />
+
+              <img class="vector-icon76" alt="" src="/photos/vector74.svg" />
+            </button>
+            <i class="i10">20/07/2021</i>
+          </div>
+          <div class="pdfreportlist10">
+            <div class="pdfreportlist-child18"></div>
+            <img
+              class="pdfreportlist-child19"
+              alt=""
+              src="/photos/frame-1518@2x.png"
+            />
+
+            <h5 class="ct-scan21">CT Scan</h5>
+            <button class="vector-wrapper19">
+              <img class="vector-icon74" alt="" src="/photos/vector72.svg" />
+            </button>
+            <button class="vector-parent23">
+              <img class="vector-icon75" alt="" src="/photos/vector73.svg" />
+
+              <img class="vector-icon76" alt="" src="/photos/vector74.svg" />
+            </button>
+            <i class="i14">20/07/2021</i>
+          </div> --}}
+          <div class="upload2">
+            <!-- class="upload-child" -->
+            <div class="file-input-wrapper">
+              <form action="/uploadfile" method="POST" enctype="multipart/form-data" >
+                <input  type="file" id="inpFile" name="inpFile">
+                <input type="hidden" name="sourcePage" value="doctorview">
+                <button type="submit" class="custom-button" id="upload">Upload</button>
+              </form>
+            </div>
+                <button  class="custom-button" style="position:absolute; left: 50%; bottom:4.5%;" id="saveToBlockchain">SaveFile</button>
+
+          </div>
+        </div>
+        <div class="uploadeddata6">
+          <div class="uploadeddata-child2"></div>
+          <b class="uploaded-data4">Uploaded Data</b>
+        </div>
+      </div>
+
+
+      <div class="form-block-wrapper">
+      <img class="form-block-icon2" alt="" src="/photos/form-block2.svg" />
+      </div>
+
+      <form action="">
+        <label class="full-name1">Full Name</label>
+        <input class="frame-child66" type="text" placeholder="fullname" id="name" required />
+        
+        <label class="medical-history3">Medical History</label>
+        <textarea class="frame-child72" placeholder="medical history separated by ," id="medicalhistory" required></textarea>
+
+        <label class="blood-group">Blood group</label>
+        <input class="frame-child67" type="text" placeholder="blood group" id="bloodgroup" required />
+        
+        <label class="age2">Age</label>
+        <input class="frame-child68" type="text" placeholder="Age" id="age" required />
+        
+        <label class="blood-pressure-mmhg1">Blood Pressure (mmhg)</label>        
+        <input class="frame-child69" type="text" placeholder="blood pressure" id="bloodpressure" required />
+
+        <label class="bs2">Blood Sugar</label>
+        <input class="frame-child90" type="text" placeholder="blood sugar" name="bloodsugar" id="bloodsugar" required />
+        
+        <label class="height-cm1">Height (cm)</label>        
+        <input class="frame-child70" type="number" placeholder="height" id="height" required />
+        
+        <label class="weight-kg1">Weight (kg)</label>        
+        <input class="frame-child71" type="number" placeholder="weight" id="weight" required/>
+
+        <label class="alergies1">Alergies</label>        
+        <textarea class="frame-child73" placeholder="alergies separated by ," id="alergies" required></textarea>
+        
+        <label class="medications5">Medications</label>        
+        <textarea class="frame-child74" placeholder="medications separated by ," id="medications" required></textarea>
+
+        <button class="save-upload-btn-group" type="submit" id="dataSubmit">
+          <div class="save-upload2">Submit</div>
+        </button>
+      </form>
+
+
+      <div class="verti-nav6">
+        <button class="vector-wrapper24" id="frameButton12">
+          <img class="vector-icon89" alt="" src="/photos/vector75.svg" />
+        </button>
+        <img
+          class="verti-nav-child4"
+          alt=""
+          src="/photos/rectangle-27676@2x.png"
+        />
+
+        <button class="vector-parent28">
+          <img class="group-child13" alt="" src="/photos/rectangle-27732.svg" />
+          <img class="group-child14" alt="" src="/photos/group-64.svg" />
+        </button>
+        <button class="gear-solid-14" id="gearSolid1">
+          <img class="vector-icon90" alt="" src="/photos/vector76.svg" />
+        </button>
+        <button
+          class="arrow-right-from-bracket-solid6"
+          id="arrowRightFromBracketSolid"
+        >
+          <img class="vector-icon91" alt="" src="/photos/vector77.svg" />
+        </button>
+      </div>
+      <h1 class="blockcapsule7">BlockCapsule</h1>
+    </div>
+
+<span id="fileObjectString" style="display: none;">{{fileObjectString}}</span>
+
+    <script>
+      var frameButton12 = document.getElementById("frameButton12");
+      if (frameButton12) {
+        frameButton12.addEventListener("click", function (e) {
+          window.location.href = "/doctor_dashboard";
+        });
+      }
+      
+      var gearSolid1 = document.getElementById("gearSolid1");
+      if (gearSolid1) {
+        gearSolid1.addEventListener("click", function (e) {
+          window.location.href = "/doctor_setting";
+        });
+      }
+      
+      var arrowRightFromBracketSolid = document.getElementById("arrowRightFromBracketSolid");
+if (arrowRightFromBracketSolid) {
+  arrowRightFromBracketSolid.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default click behavior
+
+    // Fetch API to send a POST request
+    fetch('/auth/logout', {
+      method: 'POST',
+      credentials: 'same-origin', // Use 'same-origin' if you want to send cookies with the request
+      headers: {
+        'Content-Type': 'application/json' // Set the Content-Type to JSON if you are sending JSON data
+      },
+      body: JSON.stringify({}) // You can pass data as an object and stringify it as JSON
+    })
+    .then(response => {
+      // Handle the response here if needed
+      // For example, if you expect a JSON response, you can do:
+        if (response.ok) {
+        return response.json(); // Parse the response data as JSON
+      } else {
+        throw new Error('Logout failed');
+      }
+    })
+        .then(data => {
+      // Handle the response data here if needed
+      console.log(data);
+
+      // If success is true, redirect to the home page
+      if (data.success) {
+        window.location.href = "/";
+      }
+    })
+    .catch(error => {
+      // Handle any errors that occur during the fetch request
+      console.error('Error:', error);
+    });
+  });
+}
+      </script>
+
+
+      <script>
+      const ABI = [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "verify",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isVerified",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "allowView",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "disAllowView",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "allowEdit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "disAllowEdit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "display",
+      "outputs": [
+        {
+          "internalType": "string[]",
+          "name": "",
+          "type": "string[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "viewShareAccess",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "access",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BlockCapsule.access[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "editShareAccess",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "access",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BlockCapsule.access[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isEditAllowed",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isViewAllowed",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ];
+
+        const contractAddress = 'contract-address';
+        window.web3 = new Web3(window.ethereum);
+        window.contract = new window.web3.eth.Contract(ABI, contractAddress);
+        
+        const address = localStorage.getItem("Metamaskid");
+        //localStorage.removeItem("Metamaskid");
+        console.log(address)
+
+        const fileObjectString = document.getElementById('fileObjectString').innerHTML;
+        const saveToBlockchain = document.getElementById('saveToBlockchain');
+        const dataSubmit = document.getElementById('dataSubmit');
+
+        saveToBlockchain.addEventListener('click', async(e) => {
+          e.preventDefault()
+          //window.location.reload();
+          let fileObjectString1 = fileObjectString;
+          await window.contract.methods.add(address, fileObjectString1).send({from: address});
+          console.log("saved on blockchain");
+
+        });
+
+        dataSubmit.addEventListener('click', async(e) => {
+          e.preventDefault();
+          const name = document.getElementById('name').value;
+          const medicalhistory = document.getElementById('medicalhistory').value;
+          const bloodgroup = document.getElementById('bloodgroup').value;
+          const age = document.getElementById('age').value;
+          const bloodpressure = document.getElementById('bloodpressure').value;
+          const bloodsugar = document.getElementById('bloodsugar').value;
+          const height = document.getElementById('height').value;
+          const weight = document.getElementById('weight').value;
+          const alergies = document.getElementById('alergies').value;
+          const medications = document.getElementById('medications').value;
+
+          const formUserData = {
+              fileName : 'userdata',
+              name : name,
+              bloodgroup : bloodgroup,
+              age : age,
+              bloodpressure : bloodpressure,
+              bloodsugar : bloodsugar,
+              height : height,
+              weight : weight,
+              medications : medications,
+              medicalhistory : medicalhistory,
+              alergies : alergies,
+          };
+          const userDataString = JSON.stringify(formUserData);
+          //console.log(userDataString);
+          //window.location.reload();
+          await window.contract.methods.add(address, userDataString).send({from : address});
+          console.log("saved on blockchain");
+        })
+
+        const list = window.contract.methods.display(address).call({ from: address });
+        // console.log(list);
+        //let len;
+        list.then(array => {
+          fileList = [...array];
+          //console.log(fileList)
+          arrayfile = fileList;
+          console.log(arrayfile)
+          //len = fileList.length;
+          //console.log(len);
+          const container = document.getElementById("listContainer");
+
+          arrayfile.forEach(function (file, index) {
+            let filejson = JSON.parse(file);
+            if (filejson.fileName != 'userdata')
+            {
+              var anchorTag = document.createElement('a');
+              anchorTag.classList.add("fileliststyle");
+              anchorTag.setAttribute('href', filejson.url);
+              anchorTag.target = "_blank";
+              //anchorTag.innerHTML = `file-${index}`;
+              anchorTag.innerHTML = filejson.fileName;
+              container.appendChild(anchorTag);
+            }
+            if (filejson.fileName == 'userdata')
+            {
+              document.getElementById('name').value = filejson.name;
+              document.getElementById('medicalhistory').value = filejson.medicalhistory;
+              document.getElementById('bloodgroup').value = filejson.bloodgroup;
+              document.getElementById('age').value = filejson.age;
+              document.getElementById('bloodpressure').value = filejson.bloodpressure;
+              document.getElementById('bloodsugar').value = filejson.bloodsugar;
+              document.getElementById('height').value = filejson.height;
+              document.getElementById('weight').value = filejson.weight;
+              document.getElementById('alergies').value = filejson.alergies;
+              document.getElementById('medications').value = filejson.medications;
+            }
+          })
+        });
+
+
+      </script>
+
+  </body>
+</html>

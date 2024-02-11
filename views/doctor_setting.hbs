@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    {{!-- --- using web3 cdn ---  --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    {{!-- ----------------------  --}}
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/doctor_setting.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inika:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="final-doctorsetting">
+      <div class="rectangle-parent4">
+        <div class="frame-child31"></div>
+        {{!-- <img class="form-block-icon1" alt="" src="/photos/form-block1.svg" /> --}}
+        <div class="form-block-icon1"> </div>
+        <h2 class="doctor-form">Doctor Form</h2>
+        <div class="frame-child35">
+            <!-- class="upload-child" -->
+            
+              <div class="file-input-wrapper">
+                <form action="/docfile" method="POST" enctype="multipart/form-data" >
+                  <input  type="file" class="file-input" id="inpFile" name="inpFile" >
+                  {{!-- <label for="file-input" class="file-label">Choose a file</label> --}}
+                  <button type="submit" class="custom-button">Upload</button>
+                </form>
+              </div>
+        </div>
+        <form>
+          <label class="full-name" for="fullnameid">Full Name</label>
+          <input class="group-input" type="text" id="fullnameid" placeholder="fullname" required />
+          <label class="photo" for="photoid">Photo</label>
+          {{!-- <input class="frame-child35" type="file" /> --}}
+
+          <label class="user-id"  for="userid">User ID</label>
+          <input class="frame-child32" id="userid" type="text" placeholder="User Id" required />
+
+          {{!-- <label class="metamask-id" for="metamaskid" >MetaMask Id</label>
+          <input class="frame-child33" type="text" id="metamaskid" placeholder="Metamaskid" required /> --}}
+
+          <label class="age1" for="ageid">Age</label>
+          <input class="frame-child34" type="text" id="ageid" placeholder="Age" required />
+
+          <button class="save-upload-btn-parent" type="button" id="savebtn">
+              <div class="save-upload1">Save & upload</div>
+          </button>
+        </form>
+        <div class="verti-nav2">
+        <button class="vector-wrapper4">
+          <img class="vector-icon15" alt="" src="/photos/vector75.svg" id="vectorIcon15" />
+        </button>
+        {{!-- <button class="group-userformlogo" id="groupUserformlogo">
+          <img class="vector-icon16" alt="" src="/photos/group-63.svg" />
+        </button> --}}
+
+          <img class="verti-nav-inner" alt="" src="/photos/rectangle-27672@2x.png" />
+
+          <button class="group-userformlogo" id="groupUserformlogo">
+            <img class="gear-solid-1-icon" alt="" src="/photos/group-63.svg" />
+          </button>
+          <button class="vector-parent11">
+            <img class="group-child5" alt="" src="/photos/rectangle-2774.svg" />
+            <img class="gear-solid-1-icon" alt="" src="/photos/gearsolid-2.svg" />
+          </button>
+          <button class="arrow-right-from-bracket-solid2" id="arrowRightFromBracketSolid">
+            <img class="vector-icon37" alt="" src="/photos/vector71.svg" />
+          </button>
+
+        </div>
+      </div>
+      <div class="final-doctorsetting-child"></div>
+      <div class="group-parent1">
+        <img class="group-icon27" alt="" src="/photos/group1.svg" />
+
+        <img class="group-icon28" alt="" src="/photos/group1.svg" />
+
+        <img class="group-icon29" alt="" src="/photos/group2.svg" />
+
+        <img class="group-icon30" alt="" src="/photos/group3.svg" />
+
+        <img class="group-icon31" alt="" src="/photos/group4.svg" />
+
+        <img class="group-icon32" alt="" src="/photos/group5.svg" />
+
+        <img class="group-icon33" alt="" src="/photos/group6.svg" />
+
+        <img class="group-icon34" alt="" src="/photos/group7.svg" />
+      </div>
+      <div class="group-parent2">
+        <img class="group-icon27" alt="" src="/photos/group1.svg" />
+
+        <img class="group-icon28" alt="" src="/photos/group1.svg" />
+
+        <img class="group-icon29" alt="" src="/photos/group2.svg" />
+
+        <img class="group-icon30" alt="" src="/photos/group3.svg" />
+
+        <img class="group-icon31" alt="" src="/photos/group4.svg" />
+
+        <img class="group-icon32" alt="" src="/photos/group5.svg" />
+
+        <img class="group-icon33" alt="" src="/photos/group6.svg" />
+
+        <img class="group-icon34" alt="" src="/photos/group7.svg" />
+      </div>
+      <div class="doctor-profile"></div>
+      <h1 class="blockcapsule3">BlockCapsule</h1>
+      <h5 class="drjane-cooper" id="docname">{{Name}}</h5>
+      <div class="final-doctorsetting-item"></div>
+      {{!-- <h3>Metamask : </h3> --}}
+      <h3 class="metamask-xyz123456789" id="metaid" style="display: none;">{{Metamask}}</h3>
+      <h3 class="user-id1">User Id : {{Name}}</h3>
+      {{!-- <button class="final-doctorsetting-inner"></button>
+      <b class="sign-out">Sign out</b>
+      <button class="rectangle-button"></button>
+      <b class="delete">
+        <span>Delete</span>
+        <span class="span1"> </span>
+      </b>
+      <button class="final-doctorsetting-child1"></button>
+      <b class="reset-password">Reset Password</b> --}}
+      <h5 class="years" id="docage">22 Years</h5>
+      <img
+        id="doctorimg"
+        class="final-doctorsetting-child2"
+        alt=""
+        src={{url}}
+      />
+    </div>
+
+    <span id="url" style="display: none;">{{url}}</span>
+
+    <script>
+      var vectorIcon = document.getElementById("vectorIcon15");
+      if (vectorIcon) {
+        vectorIcon.addEventListener("click", function (e) {
+          window.location.href = "/doctor_dashboard";
+        });
+      }
+      
+      var groupUserformlogo = document.getElementById("groupUserformlogo");
+      if (groupUserformlogo) {
+        groupUserformlogo.addEventListener("click", function (e) {
+          window.location.href = "/doctor_UserView";
+        });
+      }
+      
+      
+var arrowRightFromBracketSolid = document.getElementById("arrowRightFromBracketSolid");
+if (arrowRightFromBracketSolid) {
+  arrowRightFromBracketSolid.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default click behavior
+
+    // Fetch API to send a POST request
+    fetch('/auth/logout', {
+      method: 'POST',
+      credentials: 'same-origin', // Use 'same-origin' if you want to send cookies with the request
+      headers: {
+        'Content-Type': 'application/json' // Set the Content-Type to JSON if you are sending JSON data
+      },
+      body: JSON.stringify({}) // You can pass data as an object and stringify it as JSON
+    })
+    .then(response => {
+      // Handle the response here if needed
+      // For example, if you expect a JSON response, you can do:
+        if (response.ok) {
+        return response.json(); // Parse the response data as JSON
+      } else {
+        throw new Error('Logout failed');
+      }
+    })
+        .then(data => {
+      // Handle the response data here if needed
+      console.log(data);
+
+      // If success is true, redirect to the home page
+      if (data.success) {
+        window.location.href = "/";
+      }
+    })
+    .catch(error => {
+      // Handle any errors that occur during the fetch request
+      console.error('Error:', error);
+    });
+  });
+}
+      </script>
+{{!-- -----------------------------------  --}}
+      <script>
+        const ABI = [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "verify",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isVerified",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "allowView",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "disAllowView",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "allowEdit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "disAllowEdit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "display",
+      "outputs": [
+        {
+          "internalType": "string[]",
+          "name": "",
+          "type": "string[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "viewShareAccess",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "access",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BlockCapsule.access[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "editShareAccess",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "access",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BlockCapsule.access[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isEditAllowed",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isViewAllowed",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ];
+
+        const contractAddress = 'contract-address';
+        window.web3 = new Web3(window.ethereum);
+        window.contract = new window.web3.eth.Contract(ABI, contractAddress);
+
+        const address = document.getElementById("metaid").innerHTML;
+        console.log(address)
+        const savebtn = document.getElementById("savebtn");
+        
+        savebtn.addEventListener('click', async (e) => {
+          const fullnameid = document.getElementById("fullnameid").value;
+          const userid = document.getElementById("userid").value;
+          //const metamaskid = document.getElementById("metamaskid").value;
+          const ageid = document.getElementById("ageid").value;
+          const url = document.getElementById("url").innerHTML;
+
+
+          const doctordata = {
+            name : fullnameid,
+            userid : userid,
+            
+            age : ageid,
+            url : url,
+          }
+          const doctordatastr = JSON.stringify(doctordata);
+          await window.contract.methods.add(address, doctordatastr).send({from : address});
+          console.log("saved on blockchain");
+
+        })
+
+        const docdetails = window.contract.methods.display(address).call({ from: address });
+        console.log(docdetails)
+        docdetails.then(array => {
+          filedetails = [...array];
+
+          const doctorimg = document.getElementById("doctorimg");
+          const docage = document.getElementById("docage");
+          const docname = document.getElementById("docname");
+          filedetails.forEach(function(file, index) {
+            let filejson = JSON.parse(file);
+            console.log(filejson.url);
+            doctorimg.src = filejson.url;
+            docage.innerHTML = filejson.age + " years";
+            docname.innerHTML = filejson.name;
+          })
+        })
+
+      </script>
+
+  </body>
+</html>

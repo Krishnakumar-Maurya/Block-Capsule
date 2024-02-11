@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    {{!-- --- using web3 cdn ---  --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    {{!-- ----------------------  --}}
+
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/patient_dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inika:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="final-userdashboard">
+      <div class="final-userdashboard-inner">
+        <div class="frame-child54"></div>
+      </div>
+      <h1 class="blockcapsule6">BlockCapsule</h1>
+      <img class="avatar-icon1" alt="" src="/photos/avatar.svg" />
+
+      <div class="final-userdashboard-child"></div>
+      <div class="frame-docs3">
+        <div class="frame-documents5"></div>
+        <div class="uploadeddata4">
+          <div class="uploadeddata-child1"></div>
+          <b class="uploaded-data3">Uploaded Data</b>
+        </div>
+      </div>
+      <div class="final-userdashboard-item"></div>
+      <h3 class="its-good-to1">
+        It’s good to see you again, we are happy to serve you.
+      </h3>
+      <h3 class="hello-joeylene-rivera-container1">
+        <span>Hello, </span>
+        <span class="joeylene-rivera2">{{Name}}</span>
+      </h3>
+      <div class="allergies2">
+        <h4 class="frame-h4">
+          <div class="swelling-sneezing-red-container6">
+            <span class="swelling-sneezing-red-container7">
+              <p class="swelling-sneezing3" id="alergies">swelling sneezing</p>
+              {{!-- <p class="swelling-sneezing3">red rashees</p>
+              <p class="swelling-sneezing3">abcssdf</p>
+              <p class="qwerty-and-tyuio3">qwerty and tyuio</p> --}}
+            </span>
+          </div>
+        </h4>
+        <div class="frame29">
+          <div class="allergies3">Allergies</div>
+          <img class="frame-child55" alt="" src="/photos/group-317.svg" />
+        </div>
+      </div>
+      <div class="blood-sugar3">
+        <img class="blood-sugar-item" alt="" src="/photos/group-111.svg" />
+        <div class="frame29">
+          <div class="allergies3">Blood Sugar</div>
+          <img class="frame-child56" alt="" src="/photos/frame-2223231.svg" />
+        </div>
+        <div class="frame31">
+          <h4 class="mg-dl1">mg / dL</h4>
+          <h2 class="h23" id="bloodsugar">80</h2>
+        </div>
+      </div>
+      <div class="med-history1">
+        <h4 class="swelling-sneezing-red-rashees-wrapper1">
+          <div class="swelling-sneezing-red-container6">
+            <span class="swelling-sneezing-red-container7">
+              <p class="swelling-sneezing3" id="medicalhistory">swelling sneezing</p>
+              {{!-- <p class="swelling-sneezing3">red rashees</p>
+              <p class="swelling-sneezing3">abcssdf</p>
+              <p class="qwerty-and-tyuio3">qwerty and tyuio</p> --}}
+            </span>
+          </div>
+        </h4>
+        <div class="frame32">
+          <div class="medical-history2">Medical History</div>
+          <img class="frame-child57" alt="" src="/photos/frame-331.svg" />
+        </div>
+      </div>
+      <div class="heart-rate3">
+        <img class="heart-rate-item" alt="" src="/photos/group-291.svg" />
+
+        <div class="frame33">
+          <div class="heart-rate4">Blood Group</div>
+          <img class="frame-child58" alt="" src="/photos/frame-2223241.svg" />
+        </div>
+        <div class="frame34">
+          <h2 class="h24" id="bloodgroup">98</h2>
+          <h4 class="bpm1">bpm</h4>
+        </div>
+      </div>
+      <div class="medications3">
+        <h4 class="swelling-sneezing-red-rashees-wrapper2">
+          <div class="swelling-sneezing-red-container6">
+            <span class="swelling-sneezing-red-container7">
+              <p class="swelling-sneezing3" id="medications">swelling sneezing</p>
+              {{!-- <p class="swelling-sneezing3">red rashees</p>
+              <p class="swelling-sneezing3">abcssdf</p>
+              <p class="qwerty-and-tyuio3">qwerty and tyuio</p> --}}
+            </span>
+          </div>
+        </h4>
+        <div class="frame35">
+          <div class="medications4">Medications</div>
+          <img class="frame-child59" alt="" src="/photos/frame-352.svg" />
+        </div>
+      </div>
+      <div class="blood-pressure2">
+        <div class="frame-parent7">
+          <div class="vector-parent18">
+            <img class="frame-child60" alt="" src="/photos/vector-51.svg" />
+
+            <img class="frame-child61" alt="" src="/photos/vector-71.svg" />
+          </div>
+          <div class="blood-pressure3">Blood Pressure</div>
+          <img class="frame-child62" alt="" src="/photos/frame-353.svg" />
+
+          <div class="frame36">
+            <h2 class="h25" id="bloodpressure">102</h2>
+            <h4 class="mmhg1">mmhg</h4>
+            <h4 class="h44">/ 72</h4>
+          </div>
+        </div>
+        <div class="frame37"></div>
+      </div>
+      <div class="profile1">
+        <div class="info1">
+          <h4 class="age-291" id="age">Age 29</h4>
+          <b class="joeylene-rivera3">{{Name}}</b>
+        </div>
+        <div class="profile-picture1">
+          <img
+            id="userimg"
+            class="img-20190402-082739-275-icon1"
+            alt=""
+            src="/photos/img-20190402-082739-2751@2x.png"
+          />
+
+          <img class="ellipse-icon2" alt="" src="/photos/ellipse1.svg" />
+        </div>
+        <div class="frame-height1">
+          <h4 class="height1">Height</h4>
+          <h4 class="cm1" id="height">170 cm</h4>
+          <img
+            class="mdihuman-male-height-icon2"
+            alt=""
+            src="/photos/mdihumanmaleheight2.svg"
+          />
+        </div>
+        <div class="frame-weight1">
+          <h4 class="weight1">Weight</h4>
+          <h4 class="kg1" id="weight">72 kg</h4>
+          <img
+            class="mdihuman-male-height-icon3"
+            alt=""
+            src="/photos/mdihumanmaleheight3.svg"
+          />
+        </div>
+      </div>
+      <div class="frame-documents-group">
+        <div class="frame-documents6"></div>
+        <div class="frame-documents7" id="listContainer">
+          {{!-- <div class="frame-documents-child4"></div>
+          <img
+            class="frame-documents-child5"
+            alt=""
+            src="/photos/frame-1514@2x.png"
+          />
+
+          <h5 class="ct-scan14">CT Scan</h5>
+          <button class="vector-wrapper15">
+            <img class="vector-icon60" alt="" src="/photos/vector58.svg" />
+          </button>
+          <button class="vector-parent19">
+            <img class="vector-icon61" alt="" src="/photos/vector59.svg" />
+
+            <img class="vector-icon62" alt="" src="/photos/vector60.svg" />
+          </button> --}}
+
+        </div>
+        {{!-- <div class="frame-documents8">
+          <div class="frame-documents-child4"></div>
+          <img
+            class="frame-documents-child5"
+            alt=""
+            src="/photos/frame-1515@2x.png"
+          />
+
+          <h5 class="ct-scan15">CT Scan</h5>
+          <button class="vector-wrapper15">
+            <img class="vector-icon60" alt="" src="/photos/vector61.svg" />
+          </button>
+          <button class="vector-parent19">
+            <img class="vector-icon61" alt="" src="/photos/vector62.svg" />
+
+            <img class="vector-icon62" alt="" src="/photos/vector63.svg" />
+          </button>
+        </div> --}}
+        {{!-- <div class="frame-documents9">
+          <div class="frame-documents-child4"></div>
+          <img
+            class="frame-documents-child5"
+            alt=""
+            src="/photos/frame-1516@2x.png"
+          />
+
+          <h5 class="ct-scan15">CT Scan</h5>
+          <button class="vector-wrapper15">
+            <img class="vector-icon60" alt="" src="/photos/vector64.svg" />
+          </button>
+          <button class="vector-parent19">
+            <img class="vector-icon61" alt="" src="/photos/vector65.svg" />
+
+            <img class="vector-icon62" alt="" src="/photos/vector66.svg" />
+          </button>
+        </div> --}}
+        {{!-- <div class="frame-child63"></div>
+        <img class="frame-child64" alt="" src="/photos/frame-1517@2x.png" /> --}}
+
+        {{!-- <h5 class="ct-scan17">CT Scan</h5>
+        <button class="vector-wrapper18">
+          <img class="frame-child60" alt="" src="/photos/vector67.svg" />
+        </button>
+        <button class="vector-parent22">
+          <img class="vector-icon70" alt="" src="/photos/vector68.svg" />
+
+          <img class="vector-icon71" alt="" src="/photos/vector69.svg" />
+        </button> --}}
+      </div>
+      <div class="verti-nav5">
+        <button class="group-dashmain1">
+          <div class="group-dashmain-item"></div>
+          <img class="frame-icon4" alt="" src="/photos/frame3.svg" />
+        </button>
+        <img
+          class="verti-nav-child3"
+          alt=""
+          src="/photos/rectangle-27675@2x.png"
+        />
+
+        <button class="verti-nav-inner2" id="patient_form_page">
+          <img class="group-child12" alt="" src="/photos/group-63.svg" />
+        </button>
+        <button class="gear-solid-13" id="gearSolid1">
+          <img class="vector-icon72" alt="" src="/photos/vector70.svg" />
+        </button>
+        <button class="arrow-right-from-bracket-solid5" id="arrowRightFromBracketSolid" >
+          <img class="vector-icon73" alt="" src="/photos/vector71.svg" />
+        </button>
+      </div>
+    </div>
+
+    {{!-- -------------------------------------------- --}}
+    <span id="metaAccount" style="display: none;">{{Metamask}}</span>
+
+    {{!-- --------------------------------------------------  --}}
+
+    <script>
+      var gearSolid1 = document.getElementById("gearSolid1");
+      if (gearSolid1) {
+        gearSolid1.addEventListener("click", function (e) {
+          window.location.href = "/patient_setting";
+        });
+      }
+      
+      var patient_form_page = document.getElementById("patient_form_page");
+      if (patient_form_page) {
+        patient_form_page.addEventListener("click", function (e) {
+          window.location.href = "/patient_form";
+        });
+      }
+
+
+
+      var arrowRightFromBracketSolid = document.getElementById("arrowRightFromBracketSolid");
+if (arrowRightFromBracketSolid) {
+  arrowRightFromBracketSolid.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default click behavior
+
+    // Fetch API to send a POST request
+    fetch('/auth/logout', {
+      method: 'POST',
+      credentials: 'same-origin', // Use 'same-origin' if you want to send cookies with the request
+      headers: {
+        'Content-Type': 'application/json' // Set the Content-Type to JSON if you are sending JSON data
+      },
+      body: JSON.stringify({}) // You can pass data as an object and stringify it as JSON
+    })
+    .then(response => {
+      // Handle the response here if needed
+      // For example, if you expect a JSON response, you can do:
+        if (response.ok) {
+        return response.json(); // Parse the response data as JSON
+      } else {
+        throw new Error('Logout failed');
+      }
+    })
+        .then(data => {
+      // Handle the response data here if needed
+      console.log(data);
+
+      // If success is true, redirect to the home page
+      if (data.success) {
+        window.location.href = "/";
+      }
+    })
+    .catch(error => {
+      // Handle any errors that occur during the fetch request
+      console.error('Error:', error);
+    });
+  });
+}
+
+      </script>
+
+
+<script src="../connect.js"></script>
+{{!-- --------------------------  --}}
+      <script>
+        const ABI = [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "verify",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isVerified",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "allowView",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "disAllowView",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "allowEdit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "disAllowEdit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "display",
+      "outputs": [
+        {
+          "internalType": "string[]",
+          "name": "",
+          "type": "string[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "viewShareAccess",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "access",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BlockCapsule.access[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "editShareAccess",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "access",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BlockCapsule.access[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isEditAllowed",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isViewAllowed",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ];
+
+        const contractAddress = 'contract-address';
+
+        window.web3 = new Web3(window.ethereum);
+        window.contract = new window.web3.eth.Contract(ABI, contractAddress);
+
+        const metamaskAccount = document.getElementById('metaAccount').innerHTML;
+        let address = metamaskAccount;       
+
+        const bloodsugar = document.getElementById('bloodsugar');
+        const bloodgroup = document.getElementById('bloodgroup');
+        const bloodpressure = document.getElementById('bloodpressure');
+        const alergies = document.getElementById('alergies');
+        const medicalhistory = document.getElementById('medicalhistory');
+        const medications = document.getElementById('medications');
+        const age = document.getElementById('age');
+        const height = document.getElementById('height');
+        const weight = document.getElementById('weight');
+        const container = document.getElementById('listContainer');
+
+        const list = window.contract.methods.display(address).call({ from: address });
+        let userData;
+        list.then(array => {
+          fileList = [...array];
+
+          fileList.forEach(function (file, index) {
+            let filejson = JSON.parse(file);
+            if (filejson.fileName == 'userdata')
+            {
+              userData = filejson;
+              console.log(userData);
+              bloodsugar.innerHTML = userData.bloodsugar;
+              bloodgroup.innerHTML = userData.bloodgroup;
+              bloodpressure.innerHTML = userData.bloodpressure;
+              alergies.innerHTML = userData.alergies;
+              medicalhistory.innerHTML = userData.medicalhistory;
+              medications.innerHTML = userData.medications;
+              age.innerHTML = 'Age ' + userData.age;
+              height.innerHTML = userData.height + ' cm';
+              weight.innerHTML = userData.weight + ' kg';
+            }
+            if (filejson.fileName != 'userdata')
+            {
+              var anchorTag = document.createElement('a');
+              anchorTag.classList.add("fileliststyle");
+              anchorTag.setAttribute('href', filejson.url);
+              anchorTag.target = "_blank";
+              //anchorTag.innerHTML = `file-${index}`;
+              anchorTag.innerHTML = filejson.fileName;
+              container.appendChild(anchorTag);
+            }
+            if (filejson.fileName == 'userimg')
+            {
+              document.getElementById('userimg').src = filejson.url;
+            }
+          })
+        });
+        
+
+
+      </script>
+
+
+
+  </body>
+</html>

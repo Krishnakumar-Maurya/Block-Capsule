@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    {{!-- --- using web3 cdn ---  --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    {{!-- ----------------------  --}}
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/patient_setting.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inika:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+    <style>
+      th, td {
+      border: none;
+      padding: 10;
+      margin: 10;
+    }
+    tr{
+      height: 500%;
+      margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="final-usersettings">
+      <div class="nav-bar-parent">
+        <div class="nav-bar"></div>
+        <div class="frame-child19"></div>
+        <div class="frame-docs">
+          <div style="border: 2px solid black; height: 40vh; border-radius: 1rem">
+              <label id="side-lable" style="">Personal Information</label>
+              <div class="profile-picture1">
+                <img
+                  id="userimg"
+                  class="img-20190402-082739-275-icon1"
+                  alt=""
+                  src="/photos/img-20190402-082739-2751@2x.png"
+                />
+
+                <img class="ellipse-icon2" alt="" src="/photos/ellipse1.svg" />
+              </div>
+
+                  
+              <div class="upload2">
+                      <!-- class="upload-child" -->
+                <div class="file-input-wrapper">
+                  <form action="/userphoto" method="POST"  enctype="multipart/form-data">
+                    <input  type="file" id="inpFile" name="inpFile" class="file-input">
+                    {{!-- <label for="file-input" class="file-label">Select Photo</label> --}}
+                    <button type="submit" class="custom-button">Upload</button>
+                  </form>
+                  <button type="submit" class="custom-button" style="position:absolute; top:43.5%; left:50%;" id="savetoblockchain">Save</button>
+                  <span id="userphoto" style="display: none;">{{fileObjectString}}</span>
+                </div>
+              </div>
+          </div>
+        </div>
+          {{!-- <div class="pdfreportlist" id="listContainer">
+            
+          </div> --}}
+          
+
+          {{!-- <div class="uploadeddata1">
+            <div class="uploadeddata-child"></div>
+            <b class="uploaded-data">Uploaded Data</b>
+          </div> --}}
+      </div>
+    </div>
+      <div class="verti-nav">
+        <!-- dashboard button -->
+        <button class="vector-wrapper4">
+          <img
+            class="vector-icon15"
+            alt=""
+            src="/photos/vector75.svg"
+            id="vectorIcon15"
+          />
+         
+        </button>
+
+        <!-- /logo -->
+        <img
+          class="verti-nav-child"
+          alt=""
+          src="/photos/rectangle-2767@2x.png"
+        />
+        
+<!-- userform button -->
+        <button class="group-userformlogo" id="groupUserformlogo">
+          <img class="vector-icon16" alt="" src="/photos/group-63.svg" />
+
+        </button>
+<!-- setting button -->
+        <button class="group-button">
+          <img class="group-child5" alt="" src="/photos/rectangle-2774.svg" />
+          <img class="gear-solid-1-icon" alt="" src="/photos/gearsolid-2.svg" />
+        </button>
+        <!-- logout button -->
+        <button class="arrow-right-from-bracket-solid" id="arrowRightFromBracketSolid" >
+          <img class="vector-icon18" alt="" src="/photos/vector71.svg" />
+        </button>
+      </div>
+      <div class="blockcapsule1">BlockCapsule</div>
+      <div class="bgg">
+        <div class="bgg-child"></div>
+        <img
+          class="doctor-list-block-icon"
+          alt=""
+          src="/photos/doctor-list-block.svg"
+        />
+      </div>
+    
+      <div class="doctor-parent">
+        {{!-- ----------------------------  --}}
+        <h3 style=" position: absolute; bottom:95%;  left:8%;">Grant/Revoke Permission</h3>
+        <br>
+          <table class="frame-parent3" style=" border-collapse: collapse; border: none; outline: none; left: 7%; bottom:5%;" border="1">
+          <tbody>
+            <tr style="height: 50px;">
+              <td style="width: 500px;"><input  style="width: 400px;"  type="text"  id="docmetaid"></td>
+              <td><label class="switch">
+                    <input type="checkbox" id="toggleSwitch">
+                    <span class="slider"></span>
+                </label>
+                <p id="status" style="display: none;">Off</p>
+                </td>
+              <td style="width: 100px; padding: 5px; ">
+                <button class="edit-wrapper1" id="edit-button-page"  onclick="AllowEdit()">
+                  <h3 class="edit" style="color: white; top: 0%; left:87%;">Edit</h3>
+                </button>
+                <button class="edit-wrapper1" id="edit-button-page1" style="display: none;" onclick="RevokeEdit()">
+                  <h3 class="edit" style="color: white; top: 6%; left:87.5%; font-size:14px;">Revoke Edit</h3>
+                </button>
+              </td>
+              <td style="width: 100px; padding: 5px ;">
+                <button class="edit-wrapper1" id="view-button-page"   onclick="AllowView()">
+                  <h3 class="view" style="color: rgb(255, 255, 255); top: 0%; left:72%;">View</h3>
+                </button>
+                <button class="edit-wrapper1" id="view-button-page1"  style="display: none;" onclick="RevokeView()">
+                  <h3 class="edit" style="color: white; top: -6%; left:73%; font-size:14px; ">Revoke view</h3>
+                </button>
+              </td>
+
+                <!-- Add more table cells for additional user attributes if needed -->
+            </tr>
+          </tbody>
+        </table>
+        {{!-- ----------------------------------------  --}}
+        {{!-- ------------------------------  --}}
+        {{!-- <table class="frame-parent3" style=" border-collapse: collapse; border: none; outline: none; left: 7%; bottom:5%;" border="1"> --}}
+            {{!-- <tbody>
+              {{#each users}}
+                <tr style="height: 50px;">
+                  <td style="width: 500px;">{{this.Name}}</td>
+                  <td style="display: none;">{{this.Metamask}}</style=></td>
+                  <td style="width: 100px; padding: 5px; ">
+                    <button class="edit-wrapper1" onclick="Edit('{{this.Metamask}}')">
+                      <h3  style="color: white;" id="editbtn">Edit</h3>
+                    </button>
+                  </td>
+                  <td style="width: 100px; padding: 5px ;">
+                    <button class="edit-wrapper1" onclick="View('{{this.Metamask}}')">
+                      <h3  style="color: rgb(255, 255, 255); top: 0%; left:72%;" id="viewbtn">View</h3>
+                    </button>
+                  </td>
+                </tr>
+              {{/each}} --}}
+
+          {{!-- </tbody> --}}
+        {{!-- </table> --}}
+        {{!-- -------------------------------------  --}}
+        <div class="doctor" id="docAcessList" style="scroll-behavior: auto;">
+          {{!-- <div class="doc-list-1"></div>
+          <h3 class="dr-xyz-abc">Dr. XYZ ABC</h3>
+          <button class="edit">
+            <div class="edit-button"></div>
+            <b class="edit1">Edit</b>
+          </button>
+          <button class="view">
+            <div class="edit-button"></div>
+            <b class="edit1">View</b>
+          </button> --}}
+        </div>
+        {{!-- <div class="doctor1">
+          <div class="doc-list-1"></div>
+          <h3 class="dr-xyz-abc">Dr. XYZ ABC</h3>
+          <button class="edit">
+            <div class="edit-button"></div>
+            <b class="edit1">Edit</b>
+          </button>
+          <button class="view">
+            <div class="edit-button"></div>
+            <b class="edit1">View</b>
+          </button>
+        </div>
+        <div class="doctor2">
+          <div class="doc-list-1"></div>
+          <h3 class="dr-xyz-abc">Dr. XYZ ABC</h3>
+          <button class="edit">
+            <div class="edit-button"></div>
+            <b class="edit1">Edit</b>
+          </button>
+          <button class="view">
+            <div class="edit-button"></div>
+            <b class="edit1">View</b>
+          </button>
+        </div> --}}
+      </div>
+      <div class="all">
+        <div class="div" id="viewListSize">80</div>
+        <div class="frame13" style="cursor: pointer;">
+          <div class="viewing-allowed">Viewing Allowed</div>
+          <img class="frame-child20" alt="" src="/photos/group-31.svg" />
+        </div>
+      </div>
+      <div class="edit6">
+        <div class="div1" id="editListSize">80</div>
+        <div class="frame13">
+          <div class="edit-allowed">
+            <p class="allowed">Edit</p>
+            <p class="allowed">Allowed</p>
+          </div>
+          <img class="frame-child20" alt="" src="/photos/group-311.svg" />
+        </div>
+      </div>
+      <div class="view-allow">
+        <div class="div2" id="totalList">80</div>
+        <div class="frame13">
+          <div class="total-allowed">
+            <p class="allowed">Total</p>
+            <p class="allowed">Allowed</p>
+          </div>
+          <img class="frame-child20" alt="" src="/photos/group-312.svg" />
+        </div>
+      </div>
+    </div>
+    {{!-- -------------------------------------------- --}}
+    <span id="metaAccount" style="display: none;">{{Metamask}}</span>
+    <span id="docdata" style="display: none;">{{docdata}}</span>
+
+    {{!-- --------------------------------------------------  --}}
+
+    <script>
+      var vectorIcon15 = document.getElementById("vectorIcon15");
+      if (vectorIcon15) {
+        vectorIcon15.addEventListener("click", function (e) {
+          window.location.href = "/patient_dashboard";
+        });
+      }
+      
+      var groupUserformlogo = document.getElementById("groupUserformlogo");
+      if (groupUserformlogo) {
+        groupUserformlogo.addEventListener("click", function (e) {
+          window.location.href = "/patient_form";
+        });
+      }
+      
+      var arrowRightFromBracketSolid = document.getElementById("arrowRightFromBracketSolid");
+if (arrowRightFromBracketSolid) {
+  arrowRightFromBracketSolid.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default click behavior
+
+    // Fetch API to send a POST request
+    fetch('/auth/logout', {
+      method: 'POST',
+      credentials: 'same-origin', // Use 'same-origin' if you want to send cookies with the request
+      headers: {
+        'Content-Type': 'application/json' // Set the Content-Type to JSON if you are sending JSON data
+      },
+      body: JSON.stringify({}) // You can pass data as an object and stringify it as JSON
+    })
+    .then(response => {
+      // Handle the response here if needed
+      // For example, if you expect a JSON response, you can do:
+        if (response.ok) {
+        return response.json(); // Parse the response data as JSON
+      } else {
+        throw new Error('Logout failed');
+      }
+    })
+        .then(data => {
+      // Handle the response data here if needed
+      console.log(data);
+
+      // If success is true, redirect to the home page
+      if (data.success) {
+        window.location.href = "/";
+      }
+    })
+    .catch(error => {
+      // Handle any errors that occur during the fetch request
+      console.error('Error:', error);
+    });
+  });
+}
+      </script>
+
+        {{!-- --------------------------  --}}
+      <script>
+        const ABI = [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "verify",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isVerified",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "allowView",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "disAllowView",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "allowEdit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "disAllowEdit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "display",
+      "outputs": [
+        {
+          "internalType": "string[]",
+          "name": "",
+          "type": "string[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "viewShareAccess",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "access",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BlockCapsule.access[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "editShareAccess",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "access",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BlockCapsule.access[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isEditAllowed",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isViewAllowed",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ];
+
+        const contractAddress = 'contract-address';
+
+        window.web3 = new Web3(window.ethereum);
+        window.contract = new window.web3.eth.Contract(ABI, contractAddress);
+
+        const metamaskAccount = document.getElementById('metaAccount').innerHTML;
+        let address = metamaskAccount; 
+
+        const savetoblockchain = document.getElementById("savetoblockchain");
+        const userphoto = document.getElementById('userphoto').innerHTML;
+        savetoblockchain.addEventListener('click', async(e) => {
+          e.preventDefault()
+          console.log(address,userphoto);
+          await window.contract.methods.add(address, userphoto).send({from: address});
+          console.log("saved on blockchain");
+        });
+
+        const list = window.contract.methods.display(address).call({ from: address });
+        // console.log(list);
+        //let len;
+        list.then(array => {
+          fileList = [...array];
+          //console.log(fileList)
+          arrayfile = fileList;
+          console.log(arrayfile)
+          //len = fileList.length;
+          //console.log(len);
+          const userimg = document.getElementById("userimg");
+
+          arrayfile.forEach(function (file, index) {
+            let filejson = JSON.parse(file);
+            if (filejson.fileName == 'userimg')
+            {
+              userimg.src = filejson.url;
+            }
+          })
+        });
+
+        const toggleSwitch = document.getElementById("toggleSwitch");
+        const statusText = document.getElementById("status");
+
+        toggleSwitch.addEventListener("change", function() {
+            if (toggleSwitch.checked) {
+                statusText.textContent = "On";
+                let viewbtn1 = document.getElementById('view-button-page1');
+                let editbtn1 = document.getElementById('edit-button-page1');
+                let viewbtn = document.getElementById('view-button-page');
+                let editbtn = document.getElementById('edit-button-page');
+                viewbtn.style.display = "none";
+                editbtn.style.display = "none";
+                viewbtn1.style.display = "block";
+                editbtn1.style.display = "block";
+                // Do something when the switch is turned on
+            } else {
+                statusText.textContent = "Off";
+                let viewbtn1 = document.getElementById('view-button-page1');
+                let editbtn1 = document.getElementById('edit-button-page1');
+                let viewbtn = document.getElementById('view-button-page');
+                let editbtn = document.getElementById('edit-button-page');
+                viewbtn1.style.display = "none";
+                editbtn1.style.display = "none";
+                viewbtn.style.display = "block";
+                editbtn.style.display = "block";
+                // Do something when the switch is turned off
+            }
+        });
+
+
+        async function AllowView()
+        {
+          let docmetaid = document.getElementById('docmetaid').value;
+          await window.contract.methods.allowView(docmetaid).send({from : address});
+        }
+        async function AllowEdit()
+        {
+          let docmetaid = document.getElementById('docmetaid').value;
+          await window.contract.methods.allowEdit(docmetaid).send({from : address});
+        }
+        async function RevokeEdit()
+        {
+          let docmetaid = document.getElementById('docmetaid').value;
+          await window.contract.methods.disAllowEdit(docmetaid).send({from : address});
+        }
+        async function RevokeView()
+        {
+          let docmetaid = document.getElementById('docmetaid').value;
+          await window.contract.methods.disAllowView(docmetaid).send({from : address});
+        }
+
+      
+        function docListLength1()
+        {
+          let viewLength;
+          let editLength;
+          let Elen = 0;
+          let Vlen = 0;
+
+          window.contract.methods.viewShareAccess().call({ from: address })
+            .then(array => {
+              arr = [...array];
+              for (let i = 0; i < arr.length; i++)
+              {
+                if (arr[i][1] == true)
+                {
+                  Vlen++;
+                }
+              }
+              //vlen = [...array].length;
+              document.getElementById('viewListSize').innerHTML = Vlen;
+              //Vlen = vlen;
+
+              return window.contract.methods.editShareAccess().call({ from: address });
+            })
+            .then(array => {
+              arr1 = [...array];
+              for (let i = 0; i < arr1.length; i++)
+              {
+                if (arr1[i][1] == true)
+                {
+                  Elen++;
+                }
+              }
+              //elen = [...array].length;
+              document.getElementById('editListSize').innerHTML = Elen;
+              //Elen = elen;
+
+              console.log(Vlen); // This will now log the correct value
+              console.log(Elen); // This will now log the correct value
+
+              document.getElementById('totalList').innerHTML = (Elen > Vlen) ? Elen : Vlen;
+            })
+            .catch(error => {
+              console.error("Error:", error);
+            });
+
+        }
+        docListLength1()
+
+
+        function AccessList()
+        {
+          const docAcessList = document.getElementById("docAcessList");
+          const docdata = document.getElementById('docdata').innerHTML;
+          let docdata1 = JSON.parse(docdata);
+          console.log(docdata1)
+          window.contract.methods.viewShareAccess().call({ from: address })
+            .then(array => {
+              viewList = [...array];
+              //console.log(viewList[0][1]);
+
+              viewList.forEach(function (doc, index) {
+                if (doc[1] == true)
+                {
+                  
+                  for (const [Metamask, Name] of Object.entries(docdata1)) {
+                    
+                    if (Metamask == doc[0]) {
+                      //console.log(Name);
+                      var span = document.createElement('li');
+                      span.classList.add("fileliststyle");
+                      span.innerHTML = Name + "   (View)";
+                      docAcessList.appendChild(span);
+                    }
+                  }
+
+                }
+                
+              })
+            })
+
+          window.contract.methods.editShareAccess().call({ from: address })
+            .then(array => {
+              editList = [...array];
+              //console.log(viewList[0][1]);
+
+              editList.forEach(function (doc, index) {
+                if (doc[1] == true)
+                {
+                  
+                  for (const [Metamask, Name] of Object.entries(docdata1)) {
+                    
+                    if (Metamask == doc[0]) {
+                      //console.log(Name);
+                      var span = document.createElement('li');
+                      span.classList.add("fileliststyle");
+                      span.innerHTML = Name + "   (Edit)";
+                      docAcessList.appendChild(span);
+                    }
+                  }
+
+                }
+                
+              })
+            })
+        }
+        AccessList()
+
+
+
+      </script>
+  </body>
+</html>

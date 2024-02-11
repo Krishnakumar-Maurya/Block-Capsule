@@ -1,0 +1,827 @@
+.frame-child65 {
+    position: absolute;
+    height: 100%;
+    width: 4.67%;
+    top: 0;
+    right: 94.53%;
+    bottom: 0;
+    left: -0.2%;
+    background-color: var(--color-powderblue);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-right: 0.5px solid var(--color-gray-1500);
+    box-sizing: border-box;
+  }
+  /* Apply white background to input fields, textareas, and number inputs */
+  input[type="text"],
+  input[type="number"],
+  textarea
+   {
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  
+  .form-block-icon2 {
+    position: absolute;
+    height: 107.88%;
+    width: 103.96%;
+    top: -5.44%;
+    right: -1.98%;
+    bottom: -2.44%;
+    left: -1.98%;
+    border-radius: var(--br-3xs);
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .form-block-wrapper {
+    position: absolute;
+    height: 108.92%;
+    width: 58.01%;
+    top: 4.65%;
+    right: 32.15%;
+    bottom: 2.43%;
+    left: 9.84%;
+  }
+  .user-form1 {
+    margin: 0;
+    position: absolute;
+    height: 3.71%;
+    width: 30.37%;
+    top: 10.14%;
+    left: 13.34%;
+    font-size: var(--font-size-11xl);
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-block;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .save-upload-btn2 {
+    position: absolute;
+    height: 123.03%;
+    width: 104.92%;
+    top: 0;
+    right: -2.46%;
+    bottom: -23.03%;
+    left: -2.46%;
+    border-radius: var(--br-8xs);
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .save-upload2 {
+    align-self: stretch;
+    flex: 1;
+    left: 110%;
+    top: 22%;
+    position: relative;
+    font-size: var(--header-3-size);
+    font-family: var(--font-rubik);
+    color: var(--text-3);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  
+  }
+  .save-upload-btn-group {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-0) 0.19rem;
+    /* #082d0f */
+    /* var(--color-darkslategray-200) */
+    background-color: #082d0f;
+    position: absolute;
+    height: 5.39%;
+    width: 15.6%;
+    top: 74.13%;
+    right: 35.41%;
+    bottom: 4.49%;
+    left: 80%;
+    border-radius: var(--br-8xs);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: flex-start;
+  }
+  .reset-all-container,
+  .reset-all2 {
+    display: flex;
+    justify-content: center;
+  }
+  .reset-all2 {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    font-size: var(--header-3-size);
+    font-family: var(--font-rubik);
+    color: var(--text-3);
+    text-align: center;
+    align-items: center;
+  }
+  .reset-all-container {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-0) 0.19rem;
+    background-color: var(--color-darkslategray-200);
+    position: absolute;
+    height: 5.39%;
+    width: 15.6%;
+    top: 82.13%;
+    right: 35.41%;
+    bottom: 4.49%;
+    left: 80%;
+    border-radius: var(--br-8xs);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: flex-start;
+  }
+  .group-icon42 {
+    position: absolute;
+    height: 1.08%;
+    width: 0.72%;
+    top: 19.48%;
+    right: 31.54%;
+    bottom: 79.44%;
+    left: 67.74%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .full-name1,
+  .medical-history3 {
+    margin: 0;
+    position: absolute;
+    height: 2.43%;
+    width: 28.08%;
+    top: 16.86%;
+    left: 15.62%;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-block;
+  }
+  .medical-history3 {
+    width: 13.8%;
+    top: 17.29%;
+    left: 48.35%;
+  }
+  .frame-child66,
+  .frame-child67,
+  .frame-child68 {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    height: 3.52%;
+    width: 28.08%;
+    top: 20.36%;
+    right: 56.3%;
+    bottom: 76.12%;
+    left: 15.62%;
+  }
+  .frame-child67,
+  .frame-child68 {
+    height: 3.48%;
+    width: 13.49%;
+    top: 32.92%;
+    right: 70.89%;
+    bottom: 63.6%;
+  }
+  .frame-child68 {
+    top: 32.81%;
+    right: 56.3%;
+    bottom: 63.71%;
+    left: 30.21%;
+  }
+  .frame-child69,
+  .frame-child80,
+  .frame-child70,
+  .frame-child71,
+  .frame-child72,
+  .frame-child73,
+  .frame-child74 {
+    border: 0;
+    /* background-color: transparent; */
+    position: absolute;
+    height: 3.52%;
+    width: 13.58%;
+    top: 46.95%;
+    right: 56.3%;
+    bottom: 49.53%;
+    left: 15.62%;
+  }
+
+  .frame-child90{
+    border: 0;
+    /* background-color: transparent; */
+    position: absolute;
+    height: 3.52%;
+    width: 13.58%;
+    top: 46.95%;
+    right: 56.3%;
+    bottom: 49.53%;
+    left: 30.62%;
+  }
+
+
+  .frame-child70,
+  .frame-child71,
+  .frame-child72,
+  .frame-child73,
+  .frame-child74 {
+    width: 13.49%;
+    top: 61.26%;
+    right: 70.89%;
+    bottom: 35.21%;
+  }
+  .frame-child71,
+  .frame-child72,
+  .frame-child73,
+  .frame-child74 {
+    top: 61.29%;
+    right: 56.3%;
+    bottom: 35.19%;
+    left: 30.21%;
+  }
+  .frame-child72,
+  .frame-child73,
+  .frame-child74 {
+    height: 31.8%;
+    width: 13.7%;
+    top: 20.77%;
+    right: 37.88%;
+    bottom: 47.43%;
+    left: 48.42%;
+    border-radius: 5px;
+    /* background-color: rgb(255, 255, 255); */
+  }
+  .frame-child73,
+  .frame-child74 {
+    height: 26.31%;
+    top: 60.54%;
+    right: 37.95%;
+    bottom: 13.15%;
+    left: 48.36%;
+  }
+  .frame-child74 {
+    height: 11.91%;
+    width: 28.97%;
+    top: 74.94%;
+    right: 55.34%;
+    left: 15.68%;
+  }
+  .blood-group {
+    margin: 0;
+    height: 2.57%;
+    width: 13.47%;
+    top: 29.29%;
+    left: 15.62%;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+  }
+  .age2,
+  .alergies1,
+  .blood-group {
+    position: absolute;
+    display: inline-block;
+  }
+  .age2 {
+    margin: 0;
+    height: 2.47%;
+    width: 7.88%;
+    top: 29.21%;
+    left: 30.21%;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+  }
+.bs2{
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  height: 2.47%;
+  width: 7.88%;
+  top: 43.51%;
+  left: 30.21%;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+
+
+}
+
+  .alergies1 {
+    height: 2.43%;
+    width: 13.74%;
+    top: 57.43%;
+    left: 48.35%;
+  }
+  .blood-pressure-mmhg1,
+  .height-cm1,
+  .medications5,
+  .weight-kg1 {
+    margin: 0;
+    position: absolute;
+    height: 2.57%;
+    width: 28.08%;
+    top: 43.43%;
+    left: 15.62%;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-block;
+  }
+  .height-cm1,
+  .medications5,
+  .weight-kg1 {
+    width: 29.02%;
+    top: 71.43%;
+  }
+  .height-cm1,
+  .weight-kg1 {
+    width: 13.47%;
+    top: 57%;
+  }
+  .weight-kg1 {
+    top: 57.43%;
+    left: 30.24%;
+  }
+  .frame-child75 {
+    position: absolute;
+    height: 100%;
+    width: 25.8%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 74.2%;
+    background-color: var(--color-cadetblue-100);
+  }
+  .uploadeddata5 {
+    align-self: stretch;
+  }
+  .pdfreportlist-child18 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 100%;
+    right: -100%;
+    bottom: -100%;
+    left: 100%;
+    border-radius: var(--br-base);
+    background-color: var(--color-snow-100);
+    transform: rotate(180deg);
+    transform-origin: 0 0;
+  }
+  .pdfreportlist-child19 {
+    position: absolute;
+    height: 62.68%;
+    width: 16.67%;
+    top: 18.94%;
+    right: 78.51%;
+    bottom: 18.38%;
+    left: 4.81%;
+    border-radius: var(--br-6xs);
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  .ct-scan18 {
+    margin: 0;
+    position: absolute;
+    height: 20.69%;
+    width: 28.63%;
+    top: 20.53%;
+    left: 26.27%;
+    font-size: inherit;
+    font-weight: 700;
+    font-family: inherit;
+    display: inline-block;
+  }
+  .vector-icon74 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .vector-wrapper19 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    height: 35.18%;
+    width: 5.54%;
+    top: 39.09%;
+    right: 20.79%;
+    bottom: 25.74%;
+    left: 73.67%;
+  }
+  .vector-icon75,
+  .vector-icon76 {
+    position: absolute;
+    height: 114.32%;
+    width: 114.92%;
+    top: -7.16%;
+    right: -7.45%;
+    bottom: -7.16%;
+    left: -7.46%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .vector-icon76 {
+    height: 52.78%;
+    width: 37.15%;
+    top: 23.62%;
+    right: 31.42%;
+    bottom: 23.6%;
+    left: 31.43%;
+  }
+  .vector-parent23 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    height: 25.41%;
+    width: 7.13%;
+    top: 43.97%;
+    right: 6.13%;
+    bottom: 30.62%;
+    left: 86.74%;
+  }
+  .i10 {
+    position: absolute;
+    height: 21.55%;
+    width: 23.86%;
+    top: 50.91%;
+    left: 26.29%;
+    color: var(--gray-4);
+    display: inline-block;
+  }
+  .pdfreportlist10 {
+    align-self: stretch;
+    position: relative;
+    height: 3.44rem;
+  }
+  .ct-scan19 {
+    margin: 0;
+    height: 20.69%;
+    width: 28.63%;
+    top: 16.9%;
+    left: 26.27%;
+    font-size: inherit;
+    font-weight: 700;
+    font-family: inherit;
+  }
+  .ct-scan19,
+  .ct-scan21,
+  .i14 {
+    position: absolute;
+    display: inline-block;
+  }
+  .ct-scan21 {
+    margin: 0;
+    height: 20.69%;
+    width: 28.63%;
+    top: 18.71%;
+    left: 26.27%;
+    font-size: inherit;
+    font-weight: 700;
+    font-family: inherit;
+  }
+  .i14 {
+    height: 21.55%;
+    width: 23.86%;
+    top: 49.09%;
+    left: 26.29%;
+    color: var(--gray-4);
+  }
+  .upload-child {
+    align-self: stretch;
+    position: relative;
+    height: 4.56rem;
+  }
+  .frame-docs4,
+  .upload2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .frame-docs4,
+  .upload3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .upload3 {
+    position: absolute;
+    height: 5.39%;
+    width: 15.6%;
+    top: 84.13%;
+    right: 35.41%;
+    bottom: 4.49%;
+    left: 80%;
+  }
+  .upload2 {
+    align-self: stretch;
+    border-radius: var(--br-xl);
+    background-color: var(--color-gray-1400);
+    overflow: hidden;
+    padding: 0.02rem var(--padding-0);
+    align-items: center;
+    width: 100%;
+  }
+  .frame-docs4 {
+    position: absolute;
+    height: 70.27%;
+    width: 18.92%;
+    top: 0%;
+    right: 3.39%;
+    bottom: 11.88%;
+    left: 77.69%;
+    border-radius: var(--br-base);
+    background-color: var(--color-gainsboro-600);
+    border: 3px solid var(--color-black);
+    box-sizing: border-box;
+    padding: 1.38rem 1.15rem 0.78rem 1.33rem;
+    align-items: flex-start;
+    gap: 0.94rem;
+    font-size: var(--font-size-3xs);
+    color: var(--black-font);
+    font-family: var(--font-manrope);
+  }
+  .uploadeddata-child2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 1%;
+    right: -99.15%;
+    bottom: -100%;
+    left: 100%;
+    border-radius: var(--br-8xs);
+    background-color: var(--color-silver-100);
+    transform: rotate(180deg);
+    transform-origin: 0 0;
+  }
+  .uploaded-data4 {
+    position: absolute;
+    height: 108.8%;
+    width: 99.09%;
+    top: -100.37%;
+    left: 0;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .uploadeddata6 {
+    position: absolute;
+    height: 3.57%;
+    width: 13.82%;
+    top: 9.57%;
+    right: 5.81%;
+    bottom: 86.86%;
+    left: 80.37%;
+    text-align: center;
+    font-family: var(--font-manrope);
+  }
+  .rectangle-parent7 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-gainsboro-100);
+  }
+  .vector-icon89 {
+    position: absolute;
+    height: 95.45%;
+    width: 131.25%;
+    top: -4.97%;
+    right: -11.72%;
+    bottom: 9.51%;
+    left: -19.53%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .vector-wrapper24 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    margin: 0 !important;
+    height: 6.19%;
+    width: 47.76%;
+    top: 24.33%;
+    right: 25.38%;
+    bottom: 69.48%;
+    left: 26.86%;
+    z-index: 0;
+  }
+  .verti-nav-child4 {
+    
+    margin: 0 !important;
+    height: 10.27%;
+    width: 100%;
+    top: 0.5%;
+    right: 0;
+    bottom: 87.9%;
+    left: -10%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .group-child13,
+  .group-child14,
+  .verti-nav-child4 {
+    position: absolute;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .group-child13 {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: var(--br-3xs);
+  }
+  .group-child14 {
+    height: 60.66%;
+    width: 60.95%;
+    top: 17.49%;
+    right: 17.8%;
+    bottom: 15.84%;
+    left: 19.25%;
+  }
+  .vector-parent28 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    margin: 0 !important;
+    height: 5.95%;
+    width: 62.69%;
+    top: 58.23%;
+    right: 20.89%;
+    bottom: 35.82%;
+    left: 8.42%;
+    z-index: 2;
+  }
+  .gear-solid-14,
+  .vector-icon90,
+  .vector-icon91 {
+    position: absolute;
+    overflow: hidden;
+  }
+  .vector-icon90 {
+    height: 83.13%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 16.87%;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .gear-solid-14 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    margin: 0 !important;
+    height: 7.17%;
+    width: 56.72%;
+    top: 40.79%;
+    right: 26.86%;
+    bottom: 52.04%;
+    left: 13.42%;
+    z-index: 3;
+  }
+  .vector-icon91 {
+    height: 87.5%;
+    width: 100%;
+    top: 6.25%;
+    right: 0;
+    bottom: 6.25%;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .arrow-right-from-bracket-solid6 {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    margin: 0 !important;
+    height: 7.11%;
+    width: 62.69%;
+    top: 77%;
+    right: 18.8%;
+    bottom: 12;
+    left: 13.52%;
+    overflow: hidden;
+    z-index: 4;
+  }
+  .verti-nav6 {
+    position: absolute;
+    height: 99.72%;
+    width: 5.31%;
+    top: 0;
+    right: 94.61%;
+    bottom: 0.28%;
+    left: 0.08%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-3xs);
+  }
+  .blockcapsule7 {
+    margin: 0;
+    position: absolute;
+    top: 0.81rem;
+    left: 7.5rem;
+    font-size: var(--font-size-17xl);
+    font-weight: 400;
+    font-family: var(--font-goldman);
+    color: var(--color-blue-100);
+    display: inline-block;
+    width: 20.69rem;
+    height: 2.19rem;
+  }
+  .final-userform {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    font-size: var(--header-3-size);
+    color: var(--color-black);
+    font-family: var(--paragraph-bold);
+  }
+  
+  .file-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 13rem;
+    color:white ;
+  
+  }
+  
+  .file-label {
+    margin-right: 10px;
+    font-size:medium;
+    cursor: pointer;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .custom-button {
+    background-color: #082d0f;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    margin-top: 3%;
+    margin-left: auto;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .fileliststyle {
+    background: #fff;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  color: black;
+  font-size: 1.2rem;
+  display: block;
+  }
+
+  #listContainer {
+    /* margin-top: 1vh; */
+    height: 30vh;
+    overflow-y: auto;
+  }

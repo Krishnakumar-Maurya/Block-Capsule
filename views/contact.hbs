@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+    <body>
+        <form id="login-form" action="/auth/forgotpassword" method="post">
+            <label>Enter Email</label>
+            <input type="email" name="email">
+            <button type="submit" >submit</button>
+        </form>
+        <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h5 class="modal-title">Error</h5>
+                    <p class="mt-2" id="modal-error-message"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" style="background-color: rgb(13, 162, 38);" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+       // var logIn = document.getElementById("logIn");
+      // if (logIn) {
+      //  logIn.addEventListener("click", function (e) {
+    //      window.location.href = "/";
+  //      });
+//      }
+
+$(document).ready(function() {
+            // Submit the form via AJAX
+            $('#login-form').submit(function(event) {
+                event.preventDefault();
+                const form = $(this);
+                const url = form.attr('action');
+                const formData = form.serialize();
+
+                $.ajax({
+                    type: 'POST',
+                    url: url,
+                    data: formData,
+                    dataType: 'json',
+                    success: function(response) {
+                        // If success, redirect to success page or show success message
+                        window.location.href = '/home';
+                    },
+                    error: function(response) {
+                        // If error, show the error message in a popup modal
+                        const errors = response.responseJSON;
+                        let errorMessage = '';
+                        Object.values(errors).forEach(msg => {
+                            errorMessage += `<p>${msg}</p>`;
+                        });
+                        $('#modal-error-message').html(errorMessage);
+                        $('#errorModal').modal('show');
+                        $('#password').val('');
+                    }
+                });
+            });
+        });
+
+        function closeErrorModal() {
+        $('#errorModal').hide();
+        }
+      </script>
+
+
+    </body>
+
+
+</html>

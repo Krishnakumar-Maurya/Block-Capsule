@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    {{!-- --- using web3 cdn ---  --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.2.7-rc.0/web3.min.js"></script>
+    {{!-- ----------------------  --}}
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/doctor_dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inika:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+    <style>
+      th, td {
+      border: none;
+      padding: 10;
+      margin: 10;
+      }
+      tr{
+        height: 500%;
+        margin-bottom: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="final-doctormain">
+      <div class="final-doctormain-inner">
+        <div class="frame-child36"></div>
+      </div>
+      <div class="final-doctormain-child"></div>
+      <div class="rectangle-parent5">
+        <div class="frame-child37"></div>
+        <div class="recccttt"></div>
+        <img class="group-icon35" alt="" src="/photos/group8.svg" />
+
+        <img class="group-icon36" alt="" src="/photos/group9.svg" />
+
+        <img class="group-icon37" alt="" src="/photos/group10.svg" />
+
+        <img class="group-icon38" alt="" src="/photos/group11.svg" />
+
+        <img class="group-icon39" alt="" src="/photos/group12.svg" />
+
+        <img class="group-icon40" alt="" src="/photos/group13.svg" />
+      </div>
+      <div class="doctor-profile1">
+        <h5 class="drjane-cooper1" id="docname">{{Name}}</h5>
+        <div class="rectangle-parent6">
+          <div class="frame-child38"></div>
+          {{!-- <h3 class="metamask-xyz1234567891">Metamask : </h3> --}}
+          <div style="width:30%"><h3 class="metamask-xyz1234567891" id="metaid" style="display:none">{{Metamask}}</h3></div>
+          
+          <h3 class="user-id2" style="top: 1.7cm">User Id : {{Name}}</h3>
+          {{!-- <button class="frame-child39"></button>
+          <b class="sign-out1">Sign out</b>
+          <button class="frame-child40"></button>
+          <b class="delete1">
+            <span>Delete</span>
+            <span class="span2"> </span>
+          </b>
+          <button class="frame-child41"></button>
+          <b class="reset-password1">Reset Password</b> --}}
+        </div>
+        <div>
+            {{!-- {{#if age}}
+            <h5 class="years1"> {{age}} Years</h5>
+            {{else}}
+            <h5 class="years1"> # Years</h5>
+            {{/if}} --}}
+            
+            <h5 class="years1" id="docage"> # Years</h5>
+        </div>
+    
+        <img
+          id="doctorimg"
+          class="doctor-profile-child"
+          alt=""
+          src="/photos/rectangle-41@2x.png"
+        />
+      </div>
+      <h1 class="blockcapsule4">BlockCapsule</h1>
+      <div class="all" style="width: 62%; background-color: #caeae0;">
+        {{!-- <h4 class="h41">80</h4> --}}
+        <div class="frame22" style=" top:30px; width: 50%;">
+          <b class="total-requests" style="left: -0px; font-size:xx-large;">Hello Dr.</b>
+          <b id="DoctorName" style="position: absolute; left:130px; font-size:xx-large; "></b>
+          {{!-- <img class="frame-child42" alt="" src="/photos/group-311.svg" /> --}}
+        </div>
+      </div>
+
+      <div class="frame-parent2">
+        <div class="frame25">
+          <h3 class="search-patient">Search Patient</h3>
+          <input class="frame-child45" type="text" placeholder="fullname" required />
+          <button class="person-search">
+            <img class="vector-icon38" alt="" src="/photos/search.png" />
+            <!-- <img class="group-icon41" alt="" src="/photos/group14.svg" /> -->
+          </button>
+        </div>
+        {{!-- ------------------------------  --}}
+        <table class="frame-parent3" style=" border-collapse: collapse; border: none; outline: none;" border="1">
+            <tbody>
+              {{#each users}}
+                <tr style="height: 40px;">
+                  <td style="width: 400px;">{{this.Name}}</td>
+                  <td style="width: 50px; padding: 5px; ">
+                    <button class="edit-wrapper1" id="edit-button-page" onclick="Edit('{{this.Metamask}}')">
+                    <div class="view">Edit</div>
+                    </button>
+                  </td>
+                  <td style="width: 50px; padding: 5px ;">
+                    <button class="edit-wrapper1" id="view-button-page"  onclick="View('{{this.Metamask}}')">
+                    <div class="view">View</div>
+                    </button>
+                  </td>
+
+                <!-- Add more table cells for additional user attributes if needed -->
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+        {{!-- -------------------------------------  --}}
+        
+      </div>
+      <div class="verti-nav3">
+        <button class="group-dashmain">
+          <div class="group-dashmain-child"></div>
+          <img class="frame-icon3" alt="" src="/photos/frame.svg" />
+        </button>
+        <img class="verti-nav-child1" alt="" src="/photos/rectangle-27675@2x.png"/>
+
+        <button class="verti-nav-inner1" id="user-view-edit">
+          <img class="group-child10" alt="" src="/photos/group-62.svg" />
+        </button>
+
+        <button class="gear-solid-12" id="gearSolid1">
+          <img class="vector-icon39" alt="" src="/photos/vector70.svg" />
+        </button>
+        
+        <button class="arrow-right-from-bracket-solid3" id="arrowRightFromBracketSolid">
+          <img class="vector-icon40" alt="" src="/photos/vector71.svg" />
+        </button>
+      </div>
+    </div>
+{{!-- ----------------connect Metamask ----------- --}}
+<script src="../connect.js"></script>
+{{!-- --------------------------------------------  --}}
+    <script>
+
+      var gearSolid1 = document.getElementById("gearSolid1");
+      if (gearSolid1) {
+        gearSolid1.addEventListener("click", function (e) {
+          window.location.href = "/doctor_setting";
+        });
+      }
+      
+      var arrowRightFromBracketSolid = document.getElementById("arrowRightFromBracketSolid");
+if (arrowRightFromBracketSolid) {
+  arrowRightFromBracketSolid.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent the default click behavior
+
+    // Fetch API to send a POST request
+    fetch('/auth/logout', {
+      method: 'POST',
+      credentials: 'same-origin', // Use 'same-origin' if you want to send cookies with the request
+      headers: {
+        'Content-Type': 'application/json' // Set the Content-Type to JSON if you are sending JSON data
+      },
+      body: JSON.stringify({}) // You can pass data as an object and stringify it as JSON
+    })
+    .then(response => {
+      // Handle the response here if needed
+      // For example, if you expect a JSON response, you can do:
+        if (response.ok) {
+        return response.json(); // Parse the response data as JSON
+      } else {
+        throw new Error('Logout failed');
+      }
+    })
+        .then(data => {
+      // Handle the response data here if needed
+      console.log(data);
+
+      // If success is true, redirect to the home page
+      if (data.success) {
+        window.location.href = "/";
+      }
+    })
+    .catch(error => {
+      // Handle any errors that occur during the fetch request
+      console.error('Error:', error);
+    });
+  });
+}
+      </script>
+
+      <script>
+                const ABI = [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "url",
+          "type": "string"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "verify",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isVerified",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "allowView",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "disAllowView",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "allowEdit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "disAllowEdit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "display",
+      "outputs": [
+        {
+          "internalType": "string[]",
+          "name": "",
+          "type": "string[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "viewShareAccess",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "access",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BlockCapsule.access[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "editShareAccess",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "access",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct BlockCapsule.access[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isEditAllowed",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "isViewAllowed",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ];
+
+        const contractAddress = 'contract-address';
+        window.web3 = new Web3(window.ethereum);
+        window.contract = new window.web3.eth.Contract(ABI, contractAddress);
+
+        const address = document.getElementById("metaid").innerHTML;
+        //console.log(address)
+
+// --------------------------Permission -------------------
+      async function View(MetaMaskid){
+        localStorage.setItem("Metamaskid", MetaMaskid);
+        localStorage.setItem("doctorid", address);
+        //console.log(address)
+        const pms = await window.contract.methods.isViewAllowed(MetaMaskid).call({ from: address });
+        console.log(pms)
+        if (pms == 'Yes')
+        {
+          window.location.href = "/doctor_UserView";
+        }
+        else{
+          alert("You are not authorised");
+        }
+        
+      }
+      async function Edit(Metamaskid){
+        localStorage.setItem("Metamaskid", Metamaskid);
+        const pms = await window.contract.methods.isEditAllowed(Metamaskid).call({ from: address });
+        console.log(pms)
+        if (pms == 'Yes')
+        {
+          window.location.href = "/doctor_UserEdit";
+        }
+        else{
+          alert("You are not authorised");
+        }
+        
+      }
+
+// -------------------------------------------------------
+
+
+        const docdetails = window.contract.methods.display(address).call({ from: address });
+        console.log(docdetails)
+        docdetails.then(array => {
+          filedetails = [...array];
+
+          const doctorimg = document.getElementById("doctorimg");
+          
+          filedetails.forEach(function(file, index) {
+            let filejson = JSON.parse(file);
+            console.log(filejson.url);
+            doctorimg.src = filejson.url;
+            document.getElementById("docage").innerHTML = filejson.age + " years"
+            document.getElementById("docname").innerHTML = filejson.name;
+            document.getElementById("DoctorName").innerHTML = filejson.name;
+
+          })
+        })
+
+      </script>
+
+  </body>
+</html>
